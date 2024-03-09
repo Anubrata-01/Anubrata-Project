@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo h1 {
+    color: white;
+    margin-left: 60px;
+    margin-top: 30px;
+    padding: 10px;
+    cursor: pointer;
+    /* position: relative; */
+}
+
+.change-content::after {
+    content: "";
+    animation: changetext 10s infinite linear;
+    color: #00b894;
+}
+
+@keyframes changetext {
+    0% {
+        content: "Season";
+    }
+
+    20% {
+        content: "Mahina";
+    }
+
+    35% {
+        content: "Ka Samay";
+    }
+}
+
+
+.Head {
+    background-image: url("mon12.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 800px;
+    position: relative;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Nav-menu ul {
+    list-style-type: none;
+    /* display: flex; */
+    margin-right: 60px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.Nav-menu ul li {
+
+    display: inline-block;
+    /* padding-left: 50px; */
+    cursor: pointer;
+    /* background-color: aqua; */
+
+    margin-left: 40px;
+    position: relative;
+
+
+}
+
+.Nav-menu ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #00b894;
+    margin-top: 30px;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+    padding: 10px;
+    position: relative;
+
+
+}
+
+.Nav-menu ul li a::before {
+    content: " ";
+    width: 80%;
+    height: 2px;
+    background-color: aquamarine;
+    position: absolute;
+    top: 100%;
+    bottom: 10px;
+    transition: 1.2s;
+}
+
+.Nav-menu ul li:hover> ::before {
+    width: 0;
+}
+
+.Nav-menu ul li a::after {
+    content: " ";
+    width: 0;
+    height: 2px;
+    background-color: cyan;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5px;
+    
+    transition: 1.2s;
+    visibility: hidden;
+}
+
+.Nav-menu ul li:hover> :after {
+    width: 80%;
+    visibility: visible;
+}
+
+.rain {
+    background: url("rain.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    height: 300px;
+    width: 360px;
+    z-index: -1;
+    margin-bottom: 20px;
+    animation: rain 0.35s linear infinite;
+    outline: none;
+    border: none;
+}
+ 
+@keyframes rain{
+    0%{
+        background-position: 0% 0%;
+    }
+   
+    100%{
+        background-position:20% 100% ;
+    
+    }
+} 
+
+    .Quote {
+        width: 350px;
+        height: 250px;
+        margin: 300px 0 0 200px;
+    }
+
+    .Quote h1 {
+        color: white;
+        font-size: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #h {
+        
+    }
+
+   
+
+    .Quote p {
+        position: absolute;
+        bottom: 200px;
+        width: 350px;
+        z-index: 0;
+        font-size: 30px;
+        opacity: 1;
+        color: white;
+    }
